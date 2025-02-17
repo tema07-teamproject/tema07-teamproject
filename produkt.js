@@ -2,7 +2,7 @@ const myproduct = new URLSearchParams(window.location.search).get("id");
 
 let product_container = document.querySelector(".product_container");
 
-fetch(`https: dummyjson.com/products/${myproduct}`)
+fetch(`https://dummyjson.com/products/${myproduct}`)
   .then((response) => response.json())
   .then((data) => {
     if (data) {
