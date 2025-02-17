@@ -11,10 +11,10 @@ function showCategories(products) {
 
   const markup = uniqueTags
     .map(
-      (tag) =>
+      (tags) =>
         `   
-            <a href="produktliste.html?products=${tag}">
-                 <li class="list_item">${tag}</li>
+            <a href="/produktliste/produktliste.html?products=${tags}">
+                 <li class="list_item">${tags}</li>
             </a>
         `
     )
