@@ -13,7 +13,7 @@ function showCategories(products) {
     .map(
       (tags) =>
         `   
-            <a href="produktliste.html?products=${tags}">
+            <a href="/produktliste/produktliste.html?products=${tags}">
                  <li class="list_item">${tags}</li>
             </a>
         `
