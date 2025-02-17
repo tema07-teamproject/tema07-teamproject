@@ -2,7 +2,7 @@ const myproduct = new URLSearchParams(window.location.search).get("id");
 
 let product_container = document.querySelector(".product_container");
 
-fetch(`https://dummyjson.com/products/${myproduct}`)
+fetch(`https: dummyjson.com/products/${myproduct}`)
   .then((response) => response.json())
   .then((data) => {
     if (data) {
@@ -16,10 +16,8 @@ fetch(`https://dummyjson.com/products/${myproduct}`)
   });
 
 function showProduct(data) {
-  product_container.innerHTML = `
-
-   <div class="image-container">
-  <div class="discount">${data.discountPercentage}</div>
+  product_container.innerHTML = `<div class="image-container">
+        <div class="discount">${data.discountPercentage ? data.discountPercentage + "%" : ""}</div>
         <img class="img_productsite"
             src="${data.thumbnail}" alt="${data.title}">
     </div>
@@ -35,10 +33,10 @@ function showProduct(data) {
 
         <div class="shipping">
             <h2>Shipping</h2>
-            <p>${data.shippingInformation}</p>
+            <p>${data.shippingInformation || "Ships in 3-5 business days"}</p>
         </div>
 
-        <p class="low-stock"><em>${data.availabilityStatus}</em></p>
+        <p class="low-stock"><em>${data.stock < 10 ? "Low stock!" : "In stock"}</em></p>
 
         <button class="add-to-bag">ADD TO BAG</button>
     </div>`;
