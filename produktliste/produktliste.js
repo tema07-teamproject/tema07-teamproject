@@ -1,7 +1,8 @@
-const listContainer = document.querySelector(".produkt");
+const mycategory = new URLSearchParams(window.location.search).get("category");
+let listContainer = document.querySelector(".produkt");
 
 const overskrift = document.querySelector("h1");
-overskrift.innerHTML = listContainer;
+overskrift.innerHTML = mycategory;
 
 // Henter data fra dummyjson API'et
 fetch("https://dummyjson.com/products")
