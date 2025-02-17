@@ -17,7 +17,9 @@ fetch(`https://dummyjson.com/products/${myproduct}`)
 
 function showProduct(data) {
   product_container.innerHTML = `
-    <div>
+
+   <div class="image-container">
+  <div class="discount">${data.discountPercentage}</div>
         <img class="img_productsite"
             src="${data.thumbnail}" alt="${data.title}">
     </div>

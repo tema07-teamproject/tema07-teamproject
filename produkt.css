@@ -17,10 +17,30 @@
   padding-bottom: 5rem;
 }
 
+.image-container {
+  position: relative;
+}
+
+.discount {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 19px 0px 0px 19px;
+  padding: 15px 20px;
+  border-radius: 20px;
+  background-color: #404434;
+  color: #fdfcf5;
+  z-index: 1;
+  font-family: "inter";
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 .img_productsite {
   display: block;
   width: 80%;
   border: 2px solid #404434;
+  position: relative;
 }
 
 .product-details {
@@ -82,6 +102,7 @@ p {
   font-family: "Inter";
   width: 100%;
   margin-top: auto;
+  border-radius: 20px;
 }
 
 .add-to-bag:hover {
