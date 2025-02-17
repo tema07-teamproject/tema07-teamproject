@@ -1,6 +1,6 @@
 const categoryListContainer = document.querySelector(".categories_list");
 
-fetch(`https://dummyjson.com/products`)
+fetch("https://dummyjson.com/products")
   .then((response) => response.json())
   .then((data) => showCategories(data.products));
 
@@ -11,12 +11,10 @@ function showCategories(products) {
 
   const markup = uniqueTags
     .map(
-      (tags) =>
-        `   
-            <a href="/produktliste/produktliste.html?products=${tags}">
-                 <li class="list_item">${tags}</li>
-            </a>
-        `
+      (tag) =>
+        `<a href="/produktliste/produktliste.html?category=${tag}">
+             <li class="list_item">${tag}</li>
+         </a>`
     )
     .join("");
 
