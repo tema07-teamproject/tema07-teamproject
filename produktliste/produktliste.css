@@ -1,0 +1,162 @@
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* FONT */
+
+.inter-weight {
+  font-family: "Inter", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.parkinsans-weight {
+  font-family: "Parkinsans", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,
+h2 {
+  font-family: "Parkinsans", serif;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: "Inter", serif;
+  text-align: center;
+}
+
+a {
+  color: var(--green);
+  font-family: "Inter", serif;
+  text-align: center;
+}
+
+a:hover {
+  color: #0c0a08;
+}
+
+/**** MENU ***/
+
+.bar {
+  background-color: #000000;
+}
+
+/**** MAIN ****/
+
+main {
+  max-width: 1200px; /** Størrelse på skærm **/
+  margin-inline: auto; /** Centrerer **/
+  padding-left: 1rem; /** Venstre luft **/
+  padding-right: 1rem; /** Højre luft **/
+  margin-top: 65px;
+}
+
+/**** LINJE ****/
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #262240;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/**** TOP PRODUKTLISTE_BILLEDE ****/
+
+.groentsager_billede {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* Sørger for, at billedet fylder boksen uden at forvrænge */
+}
+
+.produkt_img {
+  outline: 2px solid var(--green);
+}
+
+/**** GRID - MOBIL ****/
+
+.produkt {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.item {
+  grid-row: span 4;
+  display: grid;
+  grid-template-rows: subgrid;
+  position: relative;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.produkt img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Sørger for, at billedet fylder boksen uden at forvrænge */
+}
+
+/**** GRID - DESKTOP ****/
+
+@media (min-width: 700px) {
+  .produkt {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* DISCOUNT */
+
+.discount {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--green);
+  color: var(--backgroundcolour);
+  font-family: "Inter", serif;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.foer_pris {
+  text-decoration: line-through;
+  color: grey;
+}
+
+/* SOLD OUT */
+
+.low_stock {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: var(--green);
+  color: var(--backgroundcolour);
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  font-family: "Inter", serif;
+}
+
+.sold_out_img {
+  position: relative;
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+
+.hide {
+  display: none;
+}
