@@ -9,6 +9,34 @@ header.scrolled {
   transition: 0.3s ease-in;
 }
 
+/* .shopping_cart {
+  display: none;
+  font-family: "parkinsans";
+  font-size: 1.25rem;
+  position: absolute;
+  aspect-ratio: 2/1;
+  width: 60px;
+  right: 0;
+  margin: 32.5px 135px;
+  cursor: pointer;
+  z-index: 2;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.add-to-bag {
+  background-color: #404434;
+  color: white;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Inter";
+  width: 100%;
+  margin-top: auto;
+  border-radius: 20px;
+} */
+
 /******************************* HERO-SECTION ****************************************/
 
 .hero_section {
@@ -53,6 +81,8 @@ header.scrolled {
   margin: 0 auto;
 }
 
+/****************************** https://www.w3schools.com/howto/howto_js_slideshow.asp****************************************/
+
 .cards_heading {
   display: flex;
   margin: 40px 0px;
@@ -87,6 +117,11 @@ header.scrolled {
   background-color: #e6e5dd79;
   border-radius: 5px;
   margin: 0px 25px;
+}
+
+.mySlides a {
+  text-decoration: none;
+  color: black;
 }
 
 .mySlides img {
@@ -199,6 +234,7 @@ header.scrolled {
   margin: 0px 0px 25px 0px;
   width: 100%;
   height: 100%;
+  max-width: 675px;
   object-fit: cover;
   position: relative;
 }

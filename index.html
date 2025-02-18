@@ -22,6 +22,8 @@
 
             <div class="logo"><a href="index.html"><img src="svg/logo_1.svg" alt="logo"></a></div>
 
+            <!-- <div class="shopping_cart">Cart(0)</div> -->
+
             <div class="menu-icon" id="menu-icon">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -32,7 +34,7 @@
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="productlist.html">PRODUCTS</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="mailto:simpraservice@gmail.com">CONTACT</a></li>
             </ul>
 
         </nav>
@@ -49,60 +51,64 @@
 
         </section>
 
-
         <section class="main_section" id="main_section">
 
             <h1 class="cards_heading">POPULAR</h1>
 
+            <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+
             <div class="slideshow-container">
 
-                <div class="discount">5% off</div>
-
                 <div class="mySlides fade">
-                    <img src="https://cdn.dummyjson.com/products/images/groceries/Juice/1.png" alt="Eggs">
-                    <div class="product_title">Juice</div>
-                    <div class="product_price">€ 3.99</div>
+                    <a href="/html/produkt.html?id=29">
+                        <img src="https://cdn.dummyjson.com/products/images/groceries/Juice/1.png" alt="Eggs">
+                        <div class="product_title">Juice</div>
+                        <div class="product_price">3.99 €</div>
+                        <div class="discount">5% off</div>
+                    </a>
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="https://cdn.dummyjson.com/products/images/groceries/Kiwi/1.png" alt="Green bell pepper">
-                    <div class="product_title">Kiwi</div>
-                    <div class="product_price">€ 2.49</div>
+                    <a href="/html/produkt.html?id=30">
+                        <img src="https://cdn.dummyjson.com/products/images/groceries/Kiwi/1.png"
+                            alt="Green bell pepper">
+                        <div class="product_title">Kiwi</div>
+                        <div class="product_price">2.49 €</div>
+                        <div class="discount">10% off</div>
+                    </a>
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="https://cdn.dummyjson.com/products/images/groceries/Ice%20Cream/2.png" alt="Ice cream">
-                    <div class="product_title">Ice cream</div>
-                    <div class="product_price">€ 5.49</div>
+                    <a href="/html/produkt.html?id=28">
+                        <img src="https://cdn.dummyjson.com/products/images/groceries/Ice%20Cream/2.png"
+                            alt="Ice cream">
+                        <div class="product_title">Ice cream</div>
+                        <div class="product_price">5.49 €</div>
+                        <div class="discount">8% off</div>
+                    </a>
                 </div>
 
                 <a class="prev" onclick="plusSlides(-1)">−</a>
                 <a class="next" onclick="plusSlides(1)">＋</a>
+
             </div>
 
+            <!-- <button class="add-to-bag">ADD TO BAG</button> -->
+
             <div class="categories">
+
                 <h1>CATEGORIES</h1>
-                <ul class="categories_list">
-                    <!-- <a href="produktliste.html">
-                        <li class="list_item">All</li>
-                    </a>
-                    <li class="list_item">Fruits</li>
-                    <li class="list_item">Beverages</li>
-                    <li class="list_item">Desserts</li>
-                    <li class="list_item">Condiments</li>
-                    <li class="list_item">Vegetables</li>
-                    <li class="list_item">Seafood</li>
-                    <li class="list_item">Dairy</li>
-                    <li class="list_item">Pet supplies</li>
-                    <li class="list_item">Cooking essentials</li>
-                    <li class="list_item">Meat</li> -->
-                </ul>
+                <ul class="categories_list"></ul>
+
             </div>
 
             <div class="motto_img">
+
                 <button class="motto_button">About us</button>
                 <img src="imgs/motto_image.webp" alt="fridge">
+
             </div>
+
             <div class="motto">"Accesible everyday quality"</div>
 
 

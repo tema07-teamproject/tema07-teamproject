@@ -23,32 +23,44 @@ function showCategories(products) {
 
 // https://www.w3schools.com/howto/howto_js_slideshow.asp
 
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 0;
+showSlides();
 
 function plusSlides(n) {
-  showSlides((slideIndex += n));
+  slideIndex += n;
+  showSlides();
 }
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  let i;
+function showSlides() {
   let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
+
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
   }
-  if (n < 1) {
-    slideIndex = slides.length;
+  if (slideIndex < 0) {
+    slideIndex = slides.length - 1;
   }
-  for (i = 0; i < slides.length; i++) {
+
+  // Hide all slides
+  for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
+
+  // Show the current slide
+  slides[slideIndex].style.display = "block";
 }
+
+// const shoppingCart = document.querySelector(".shopping_cart");
+// const addToBagButton = document.querySelector(".add-to-bag");
+
+// let cartCount = 0;
+
+// addToBagButton.addEventListener("click", function () {
+//   cartCount++;
+
+//   shoppingCart.textContent = `Cart(${cartCount})`;
+
+//   if (cartCount > 0) {
+//     shoppingCart.style.display = "block";
+//   }
+// });
