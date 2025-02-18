@@ -1,74 +1,83 @@
+/* Nulstiller margin og padding for alle elementer og sikrer, at box-sizing er border-box */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Definerer globale variabler til farver */
 :root {
-  --backgroundcolour: #fdfcf5;
-  --green: #404434;
+  --backgroundcolour: #fdfcf5; /* Baggrundsfarve */
+  --green: #404434; /* Grøn farve */
 }
 
+/* Gør scrolling mere glidende */
 html {
   scroll-behavior: smooth;
 }
 
+/* Sætter baggrundsfarven for hele siden */
 body {
-  background-color: #fdfcf5;
+  background-color: var(--backgroundcolour);
 }
 
 /******************************* HEADER ****************************************/
 
+/* Fjerner scrolling, når en klasse "no-scroll" tilføjes til body */
 body.no-scroll {
   overflow: hidden;
 }
 
+/* Styling af header - fastgjort øverst på siden */
 header {
   display: flex;
   padding: 0;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 1; /* Sørger for, at header er over andre elementer */
 }
 
+/* Styling af logoet */
 .logo {
   position: absolute;
-  aspect-ratio: 2/1;
+  aspect-ratio: 2/1; /* Sikrer korrekt proportioner */
   width: 60px;
   right: 0;
-  margin: 27.5px 30px;
-  cursor: pointer;
+  margin: 27.5px 30px; /* Afstand fra højre kant */
+  cursor: pointer; /* Gør det klikbart */
   z-index: 2;
   color: var(--primary-color);
-  transition: 0.3s ease;
+  transition: 0.3s ease; /* Blød overgang ved hover */
 }
 
+/* Gør logoet større, når man hover */
 .logo:hover {
   transform: scale(1.1);
 }
 
+/* Navigationens container - skjult som standard */
 .nav-links {
   position: absolute;
-  display: none;
+  display: none; /* Skjules som standard */
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 100vh; /* Fylder hele skærmens højde */
   width: 100%;
-  background-color: #0c0a0853;
-  backdrop-filter: blur(7.5px);
+  background-color: #0c0a0853; /* Semi-transparent mørk baggrund */
+  backdrop-filter: blur(7.5px); /* Tilføjer blur-effekt */
   flex-direction: column;
-  padding: 125px 0px;
+  padding: 125px 0px; /* Giver luft i toppen */
+  z-index: 5; /* Sørger for, at menuen er øverst */
 }
 
-.nav-links.open {
-  display: flex;
-}
-
+/* Når klassen 'open' eller 'show' tilføjes, vises navigationen */
+.nav-links.open,
 .nav-links.show {
   display: flex;
 }
 
+/* Styling af navigationspunkter */
 .nav-links li {
   display: flex;
   height: 100%;
@@ -77,9 +86,10 @@ header {
   align-items: center;
 }
 
+/* Styling af links i navigationen */
 .nav-links li a {
-  text-decoration: none;
-  color: #ffffffd6;
+  text-decoration: none; /* Fjerner understregning */
+  color: #ffffffd6; /* Hvid tekst med lidt gennemsigtighed */
   cursor: pointer;
   font-family: "parkinsans", serif;
   font-size: 2.5rem;
@@ -87,10 +97,12 @@ header {
   transition: 0.3s ease;
 }
 
+/* Gør links lysere ved hover */
 .nav-links li a:hover {
   color: #ffffff;
 }
 
+/* Menuikon (hamburgermenu) */
 .menu-icon {
   display: flex;
   position: absolute;
@@ -98,21 +110,23 @@ header {
   justify-content: space-between;
   top: 0;
   left: 0;
-  margin: 30px 30px;
+  margin: 30px 30px; /* Afstand fra øverste venstre hjørne */
   width: 30px;
   height: 23px;
   cursor: pointer;
   z-index: 2;
-  transition: 0.3s ease;
+  transition: 0.3s ease; /* Blød overgang ved hover */
 }
 
+/* Gør menuikonet højere ved hover */
 .menu-icon:hover {
   height: 27.5px;
   cursor: pointer;
 }
 
+/* Styling af linjerne i burgermenuen */
 .bar {
-  height: 3px;
-  background-color: #ffffff;
-  border-radius: 2.5px;
+  height: 3px; /* Tykkelse på linjerne */
+  background-color: #ffffff; /* Hvid farve */
+  border-radius: 2.5px; /* Giver afrundede hjørner */
 }
