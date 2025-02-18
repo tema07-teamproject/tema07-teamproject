@@ -1,162 +1,187 @@
+/* Billeder */
 img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100%; /* Sørger for, at billeder fylder deres container */
+  height: auto; /* Bevarer billedets proportioner */
+  display: block; /* Undgår ekstra mellemrum under billeder */
 }
 
-/* FONT */
+/* FONT-STYLING */
 
+/* Definerer en skrifttypeklasse med Inter-font */
 .inter-weight {
   font-family: "Inter", serif;
   font-weight: 400;
   font-style: normal;
 }
 
+/* Definerer en skrifttypeklasse med Parkinsans-font */
 .parkinsans-weight {
   font-family: "Parkinsans", serif;
   font-weight: 400;
   font-style: normal;
 }
 
+/* Overskrifter */
 h1,
 h2 {
   font-family: "Parkinsans", serif;
-  text-align: center;
+  text-align: center; /* Centrerer overskrifter */
 }
 
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Tilføjer luft under h1 */
 }
 
+/* Afsnit */
 p {
   font-family: "Inter", serif;
-  text-align: center;
+  text-align: center; /* Centrerer tekst */
 }
 
+/* Links */
 a {
-  color: var(--green);
+  color: var(--green); /* Bruger en CSS-variabel til farve */
   font-family: "Inter", serif;
   text-align: center;
+  font-weight: bold; /* Gør teksten fed */
 }
 
 a:hover {
-  color: #0c0a08;
+  color: #0c0a08; /* Ændrer farve ved hover */
 }
 
 /**** MENU ***/
 
+/* Styling af en burger-menu */
 .bar {
-  background-color: #000000;
+  background-color: #000000; /* Sort baggrund */
 }
 
 /**** MAIN ****/
 
+/* Styling af main-indholdet */
 main {
-  max-width: 1200px; /** Størrelse på skærm **/
-  margin-inline: auto; /** Centrerer **/
-  padding-left: 1rem; /** Venstre luft **/
-  padding-right: 1rem; /** Højre luft **/
-  margin-top: 65px;
+  max-width: 1200px; /* Begrænser bredden af indholdet */
+  margin-inline: auto; /* Centrerer indholdet horisontalt */
+  padding-left: 1rem; /* Tilføjer luft i venstre side */
+  padding-right: 1rem; /* Tilføjer luft i højre side */
+  margin-top: 65px; /* Skubber main nedad */
 }
 
 /**** LINJE ****/
 
+/* En vandret linje til adskillelse af sektioner */
 .line {
-  width: 100%;
-  height: 1px;
-  background-color: #262240;
+  width: 100%; /* Fylder hele bredden */
+  height: 1px; /* Tynd linje */
+  background-color: #262240; /* Mørkeblå farve */
   margin-top: 30px;
   margin-bottom: 20px;
 }
 
 /**** TOP PRODUKTLISTE_BILLEDE ****/
 
+/* Styling af et specifikt billede */
 .groentsager_billede {
   width: 100%;
   height: 250px;
-  object-fit: cover; /* Sørger for, at billedet fylder boksen uden at forvrænge */
+  object-fit: cover; /* Sørger for, at billedet fylder containeren uden at forvrænge */
 }
 
+/* Ramme rundt om produktbilleder */
 .produkt_img {
   outline: 2px solid var(--green);
 }
 
 /**** GRID - MOBIL ****/
 
+/* Opsætning af produktgrid */
 .produkt {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: 1fr 1fr; /* To kolonner */
+  gap: 30px; /* Afstand mellem elementer */
 }
 
+/* Individuelle produktkort */
 .item {
-  grid-row: span 4;
+  grid-row: span 4; /* Strækker sig over fire rækker */
   display: grid;
   grid-template-rows: subgrid;
   position: relative;
 }
 
+/* Wrapper til produktbilleder */
 .image-wrapper {
   position: relative;
   display: inline-block;
   width: 100%;
 }
 
+/* Styling af produktbilleder */
 .produkt img {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Sørger for, at billedet fylder boksen uden at forvrænge */
+  object-fit: cover; /* Sikrer, at billeder fylder boksen uden at forvrænge */
 }
 
 /**** GRID - DESKTOP ****/
 
+/* Ændrer grid-layout på større skærme */
 @media (min-width: 700px) {
   .produkt {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr; /* Tre kolonner */
+    gap: 30px; /* Afstand mellem elementer */
   }
 }
 
 /* DISCOUNT */
 
+/* Styling af rabatmærke */
 .discount {
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px;
   background-color: var(--green);
   color: var(--backgroundcolour);
   font-family: "Inter", serif;
-  padding: 5px 10px;
-  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 15px 20px;
+  border-radius: 20px;
   font-size: 14px;
 }
 
+/* Styling af før-pris (streget over) */
 .foer_pris {
-  text-decoration: line-through;
+  text-decoration: line-through; /* Gør prisen overstreget */
   color: grey;
+}
+
+/* Styling af nedsat pris */
+.efter_pris {
+  font-size: 16px;
+  font-weight: bold;
 }
 
 /* SOLD OUT */
 
+/* Styling af "Low Stock"-meddelelse */
 .low_stock {
   position: absolute;
   bottom: 10px;
-  left: 10px;
+  right: 10px;
   background-color: var(--green);
   color: var(--backgroundcolour);
-  padding: 5px 10px;
-  font-size: 14px;
-  border-radius: 5px;
   font-family: "Inter", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 15px 20px;
+  border-radius: 20px;
+  font-size: 14px;
 }
 
-.sold_out_img {
-  position: relative;
-  opacity: 0.5;
-  filter: grayscale(100%);
-}
-
+/* Skjuler elementer med denne klasse */
 .hide {
   display: none;
 }

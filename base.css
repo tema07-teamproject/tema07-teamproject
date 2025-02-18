@@ -130,3 +130,122 @@ header {
   background-color: #ffffff; /* Hvid farve */
   border-radius: 2.5px; /* Giver afrundede hjørner */
 }
+
+/* FOOTER */
+
+/* Footer (Desktop) */
+@media (min-width: 700px) {
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+footer {
+  margin-top: 2rem;
+  background-color: var(--green);
+  color: var(--backgroundcolour);
+  font-family: "Inter", serif;
+  display: grid;
+  padding: 2rem;
+}
+
+label,
+input,
+button {
+  display: block;
+  font-family: "Inter", serif;
+}
+
+form input,
+form text {
+  background-color: var(--backgroundcolour); /* Lysegrå baggrund */
+  border: none;
+  padding: 7px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+form button {
+  background-color: var(--backgroundcolour);
+  color: var(--green);
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+form button:hover {
+  background-color: var(--backgroundcolour);
+  color: #0c0a08;
+}
+
+@media (min-width: 700px) {
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-inline: 5rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.footer_img {
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+footer h1 {
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+@media (min-width: 700px) {
+  footer h1 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 10px;
+  }
+}
+
+footer h2 {
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+footer h3,
+ul {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--backgroundcolour);
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+@media (min-width: 700px) {
+  footer form {
+    margin-left: 12.5rem;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 699px) {
+  footer form {
+    margin-left: 6rem;
+    margin-top: 10px;
+  }
+}
+
+footer ul {
+  list-style: none;
+}
