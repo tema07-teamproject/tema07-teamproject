@@ -49,7 +49,7 @@ function showList(products) {
             </div>
             
             <!-- Link til produktside -->
-            <a class="read_more" href="/html/produkt.html?id=${product.id}">Read more</a>
+            <a class="read_more" href="../html/produkt.html?id=${product.id}">Read more</a>
         </div>`
     )
     .join(""); // Samler HTML-strengen
