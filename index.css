@@ -1,50 +1,26 @@
+/* Forhindrer horisontal scrolling på hele siden */
 body {
   overflow-x: hidden;
 }
 
+/* Styling af header, når den har klassen 'scrolled' */
 header.scrolled {
-  background-color: #8d8d8d5b;
-  backdrop-filter: blur(7.5px);
-  height: 90px;
-  transition: 0.3s ease-in;
+  background-color: #8d8d8d5b; /* Gør baggrundsfarven lidt gennemsigtig */
+  backdrop-filter: blur(7.5px); /* Tilføjer en sløringseffekt til baggrunden */
+  height: 90px; /* Sætter højden på headeren */
+  transition: 0.3s ease-in; /* Tilføjer en glidende overgang på 0.3 sekunder, når headeren ændrer sig */
 }
-
-/* .shopping_cart {
-  display: none;
-  font-family: "parkinsans";
-  font-size: 1.25rem;
-  position: absolute;
-  aspect-ratio: 2/1;
-  width: 60px;
-  right: 0;
-  margin: 32.5px 135px;
-  cursor: pointer;
-  z-index: 2;
-  color: white;
-  transition: 0.3s ease;
-}
-
-.add-to-bag {
-  background-color: #404434;
-  color: white;
-  border: none;
-  padding: 20px;
-  cursor: pointer;
-  font-size: 16px;
-  font-family: "Inter";
-  width: 100%;
-  margin-top: auto;
-  border-radius: 20px;
-} */
 
 /******************************* HERO-SECTION ****************************************/
 
+/* Styling af hero-sektionen (første sektion på siden) */
 .hero_section {
-  position: relative;
-  height: 100vh;
-  width: 100%;
+  position: relative; /* For at placere de efterfølgende elementer relativt i forhold til hero-sektionen */
+  height: 100vh; /* Sætter højden til 100% af viewport højden */
+  width: 100%; /* Sætter bredden til 100% af viewport bredden */
 }
 
+/* Gør både billede og tekst i hero-sektionen fuld højde og bredde */
 .hero_image,
 .hero_image img,
 .hero_section_text {
@@ -52,210 +28,219 @@ header.scrolled {
   width: 100%;
 }
 
+/* Gør billedet i hero-sektionen til at dække hele området uden at blive forvrænget */
 .hero_image img {
   object-fit: cover;
 }
 
+/* Styling af teksten i hero-sektionen */
 .hero_section_text {
-  position: absolute;
-  display: flex;
-  font-family: "parkinsans", serif;
-  font-weight: 900;
-  letter-spacing: 7.5px;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  color: white;
+  position: absolute; /* Gør teksten absolut i forhold til den overordnede container */
+  display: flex; /* Brug flexbox for at centrere teksten */
+  font-family: "parkinsans", serif; /* Sætter skrifttypen */
+  font-weight: 900; /* Gør teksten fed */
+  letter-spacing: 7.5px; /* Øger afstanden mellem bogstaverne */
+  align-items: center; /* Vertikal centrering af teksten */
+  justify-content: center; /* Horisontal centrering af teksten */
+  font-size: 3rem; /* Sætter størrelsen på teksten */
+  color: white; /* Sætter farven på teksten til hvid */
 }
 
 /******************************* MAIN ****************************************/
 
-.main_section {
-  position: absolute;
-  top: 150%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 100%;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/****************************** https://www.w3schools.com/howto/howto_js_slideshow.asp****************************************/
-
+/* Slideshow-styling */
 .cards_heading {
-  display: flex;
-  margin: 40px 0px;
-  justify-content: center;
-  font-family: "parkinsans", serif;
-  font-size: 2.25rem;
+  display: flex; /* Brug flexbox for at centrere overskriften */
+  margin: 40px 0px; /* Giver lidt afstand før og efter overskriften */
+  justify-content: center; /* Centrerer overskriften horisontalt */
+  font-family: "parkinsans", serif; /* Skrifttype for overskriften */
+  font-size: 2.25rem; /* Skrifttype størrelse */
 }
 
+/* Container til slideshowet */
 .slideshow-container {
-  max-width: 700px;
-  position: relative;
-  margin: 0 auto;
+  max-width: 700px; /* Maksimal bredde for slideshowet */
+  position: relative; /* For at kunne placere de næste elementer relativt til containeren */
+  margin: 0 auto; /* Centrerer slideshowet horisontalt */
 }
 
+/* Styling af rabat-etiketten i slideshowet */
 .discount {
-  position: absolute;
+  position: absolute; /* Gør det muligt at placere rabat-etiketten på en præcis position */
   top: 0;
   left: 0;
-  margin: 20px 0px 0px 40px;
-  padding: 15px 20px;
-  border-radius: 50px;
-  background-color: #404434;
-  color: #fdfcf5;
-  z-index: 1;
-  font-family: "inter";
-  font-size: 1rem;
-  font-weight: 600;
+  margin: 20px 0px 0px 40px; /* Sætter afstand til kanten */
+  padding: 15px 20px; /* Sætter polstringen (afstand inden i etiketten) */
+  border-radius: 50px; /* Rundede hjørner */
+  background-color: #404434; /* Baggrundsfarve */
+  color: #fdfcf5; /* Tekstfarve */
+  z-index: 1; /* Gør etiketten synlig ovenpå billederne */
+  font-family: "inter"; /* Skrifttype for teksten */
+  font-size: 1rem; /* Skriftstørrelse */
+  font-weight: 600; /* Fed tekst */
 }
 
+/* Slideshow billeder */
 .mySlides {
-  display: none;
-  background-color: #e6e5dd79;
-  border-radius: 5px;
-  margin: 0px 25px;
+  display: none; /* Skjuler slideshow billederne som standard */
+  outline: solid 2px black; /* En sort kant rundt om billederne */
+  margin: 0px 25px; /* Margin omkring billederne */
 }
 
+/* Links inde i billederne (i slideshow) */
 .mySlides a {
-  text-decoration: none;
-  color: black;
+  text-decoration: none; /* Fjerner understregning fra links */
+  color: black; /* Sætter linkfarve til sort */
 }
 
+/* Billeder i slideshowet */
 .mySlides img {
-  width: 100%;
+  width: 100%; /* Gør billederne 100% brede */
 }
 
+/* Styling af produkttitel i slideshowet */
 .product_title {
-  position: absolute;
-  margin: 15px 0px 10px 50px;
-  font-family: "parkinsans";
-  font-size: 1.25rem;
-  font-weight: 600;
+  position: absolute; /* Positionerer titlen relativt til billedet */
+  margin: 15px 0px 10px 50px; /* Afstand til kanterne */
+  font-family: "parkinsans"; /* Skrifttype for produktets titel */
+  font-size: 1.25rem; /* Skrifttype størrelse */
+  font-weight: 600; /* Fed tekst */
 }
 
+/* Styling af produktprisen */
 .product_price {
-  position: absolute;
-  margin: 45px 0px 0px 50px;
-  font-family: "parkinsans";
-  font-size: 1rem;
-  font-weight: 600;
+  position: absolute; /* Positionerer prisen relativt til billedet */
+  margin: 45px 0px 0px 50px; /* Afstand til kanterne */
+  font-family: "parkinsans"; /* Skrifttype for produktprisen */
+  font-size: 1rem; /* Skrifttype størrelse */
+  font-weight: 600; /* Fed tekst */
 }
 
+/* Styling af knapperne til at navigere i slideshowet */
 .prev,
 .next {
-  cursor: pointer;
-  position: absolute;
-  top: 42.5%;
+  cursor: pointer; /* Gør knapperne klikbare */
+  position: absolute; /* Positionerer knapperne over billederne */
+  top: 42.5%; /* Centrerer knapperne vertikalt */
   width: auto;
-  margin-top: -22px;
-  padding: 35px;
-  font-weight: 900;
-  font-size: 48px;
-  transition: 0.5s ease;
+  margin-top: -22px; /* Lidt justering af position */
+  padding: 35px; /* Indvendig polstring */
+  font-weight: 900; /* Fed tekst */
+  font-size: 48px; /* Størrelse på ikonerne */
+  transition: 0.5s ease; /* Glidende overgang ved hover */
 }
 
+/* Styling af den næste knap */
 .next {
-  right: 0;
+  right: 0; /* Placerer knappen til højre */
 }
 
+/* Hover-effekt på knapperne (ændrer farve ved hover) */
 .prev:hover,
 .next:hover {
-  color: #404434;
+  color: #404434; /* Ændrer farven på knapperne */
 }
 
+/* Fade-effekt for slideshow billederne */
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+  animation-name: fade; /* Bruger fade-animationen */
+  animation-duration: 1.5s; /* Indstiller varigheden af animationen */
 }
 
+/* Keyframes til fade-animationen */
 @keyframes fade {
   from {
-    opacity: 0.4;
+    opacity: 0.4; /* Starter animationen med lav opacitet */
   }
   to {
-    opacity: 1;
+    opacity: 1; /* Slutter med fuld opacitet */
   }
 }
 
 /******************************* CATEGORIES ****************************************/
 
+/* Styling af kategori-sektionen */
 .categories {
-  margin: 150px 0px 75px 0px;
-  font-family: "parkinsans";
-  text-align: center;
+  margin: 150px 0px 75px 0px; /* Afstand før og efter sektionen */
+  font-family: "parkinsans"; /* Skrifttype */
+  text-align: center; /* Centrerer teksten */
 }
 
+/* Links i kategorilisten */
 .categories_list a {
-  text-decoration: none;
-  color: black;
+  text-decoration: none; /* Fjerner understregning fra links */
+  color: black; /* Sætter farven på links til sort */
 }
 
+/* Styling af kategorititel */
 .categories h1 {
-  font-size: 2rem;
-  margin: 25px 0px;
+  font-size: 2rem; /* Skrifttype størrelse */
+  margin: 25px 0px; /* Afstand før og efter overskriften */
 }
 
+/* Fjernelse af standard listepunkter */
 .categories ul {
   list-style: none;
 }
 
+/* Styling af hver kategori i listen */
 .categories ul li {
-  padding: 10px 0px;
-  font-size: 1.25rem;
-  font-weight: 500;
-  transition: 0.3s ease;
-  cursor: pointer;
+  padding: 10px 0px; /* Afstand før og efter hvert listepunkt */
+  font-size: 1.25rem; /* Skrifttype størrelse */
+  font-weight: 500; /* Normal vægt på teksten */
+  transition: 0.3s ease; /* Glidende overgang på hover */
+  cursor: pointer; /* Ændrer musemarkøren til pointer */
 }
 
+/* Hover-effekt på kategori-listen */
 .categories ul li:hover {
-  font-family: "inter";
-  font-weight: 900;
+  font-family: "inter"; /* Ændrer skrifttype på hover */
+  font-weight: 900; /* Gør teksten fed på hover */
 }
 
 /******************************* MOTTO ****************************************/
 
+/* Styling af mottoet */
 .motto {
-  font-family: "parkinsans";
-  font-size: 2rem;
-  margin: 0 auto;
-  text-align: center;
+  font-family: "parkinsans"; /* Skrifttype */
+  font-size: 2rem; /* Skrifttype størrelse */
+  margin: 0 auto; /* Centrerer mottoet */
+  text-align: center; /* Centrerer teksten */
 }
 
+/* Container til billede i motto-sektionen */
 .motto_img {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* Vertikal centrering */
+  justify-content: center; /* Horisontal centrering */
 }
 
+/* Styling af billedet i motto-sektionen */
 .motto_img img {
-  margin: 0px 0px 25px 0px;
-  width: 100%;
-  height: 100%;
-  max-width: 675px;
-  object-fit: cover;
-  position: relative;
+  margin: 0px 0px 25px 0px; /* Afstand til andre elementer */
+  width: 100%; /* Gør billedet 100% bredt */
+  height: 100%; /* Gør billedet 100% højt */
+  max-width: 675px; /* Maksimal bredde for billedet */
+  object-fit: cover; /* Sørger for, at billedet fylder området uden forvrængning */
+  position: relative; /* Gør det muligt at placere knapper over billedet */
 }
 
+/* Styling af knappen i motto-sektionen */
 .motto_button {
-  position: absolute;
-  padding: 40px 60px;
-  border-radius: 1000px;
-  background-color: #8d8d8d5b;
-  backdrop-filter: blur(7.5px);
-  color: #ffffff;
-  font-family: "parkinsans";
-  font-size: 1.4rem;
-  font-weight: 900;
-  z-index: 1;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s ease;
+  position: absolute; /* Placerer knappen ovenpå billedet */
+  padding: 40px 60px; /* Polstring inde i knappen */
+  border-radius: 1000px; /* Rund kant på knappen */
+  background-color: #8d8d8d5b; /* Gennemsigtig baggrundsfarve */
+  backdrop-filter: blur(7.5px); /* Tilføjer sløringseffekt */
+  color: #ffffff; /* Hvid tekstfarve */
+  font-family: "parkinsans"; /* Skrifttype */
+  font-size: 1.4rem; /* Skrifttype størrelse */
+  font-weight: 900; /* Fed tekst */
+  z-index: -1; /* Sørger for, at knappen er ovenpå billedet */
 }
 
+/* Hover-effekt på knappen */
 .motto_button:hover {
-  backdrop-filter: blur(10px);
-  transform: scale(1.1);
+  backdrop-filter: blur(10px); /* Øger sløringen ved hover */
+  transform: scale(1.1); /* Gør knappen lidt større */
 }

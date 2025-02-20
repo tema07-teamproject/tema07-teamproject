@@ -46,7 +46,7 @@ header {
   right: 0;
   margin: 27.5px 30px; /* Afstand fra højre kant */
   cursor: pointer; /* Gør det klikbart */
-  z-index: 2;
+  z-index: 6;
   color: var(--primary-color);
   transition: 0.3s ease; /* Blød overgang ved hover */
 }
@@ -62,6 +62,7 @@ header {
   display: none; /* Skjules som standard */
   top: 0;
   left: 0;
+  margin: 0;
   height: 100vh; /* Fylder hele skærmens højde */
   width: 100%;
   background-color: #0c0a0853; /* Semi-transparent mørk baggrund */
@@ -114,7 +115,7 @@ header {
   width: 30px;
   height: 23px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 6;
   transition: 0.3s ease; /* Blød overgang ved hover */
 }
 
