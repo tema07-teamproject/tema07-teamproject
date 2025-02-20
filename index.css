@@ -74,7 +74,6 @@ header.scrolled {
   border-radius: 50px; /* Rundede hjørner */
   background-color: #404434; /* Baggrundsfarve */
   color: #fdfcf5; /* Tekstfarve */
-  z-index: 1; /* Gør etiketten synlig ovenpå billederne */
   font-family: "inter"; /* Skrifttype for teksten */
   font-size: 1rem; /* Skriftstørrelse */
   font-weight: 600; /* Fed tekst */
