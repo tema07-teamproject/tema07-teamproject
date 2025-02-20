@@ -26,7 +26,7 @@ function showCategories(products) {
     .map(
       (tag) =>
         // For hver tag genereres et link, der peger på en produktside med kategorien som parameter i URL'en.
-        `<a href="/produktliste/produktliste.html?category=${tag}">
+        `<a href="produktliste/produktliste.html?category=${tag}">
              <li class="list_item">${tag}</li>
          </a>`
     )
